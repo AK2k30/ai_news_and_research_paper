@@ -1,13 +1,13 @@
 # InNews🇮🇳: News Summarizer App
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
-[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)   
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-360/)   
 
 ## Overview
 
 AINewsSummari is a web application built with Streamlit, aimed at providing users with curated news and research papers. The application fetches data from various sources such as Google News and Hugging Face Papers, summarizes news articles using natural language processing (NLP) techniques, and allows users to explore detailed information about research papers related to Artificial Intelligence.
 
-## [Demo of App](https://share.streamlit.io/spidy20/innews/App.py)
+## [Demo of App](https://ainewssummarizer.streamlit.app/)
 
 ## Purpose
 
@@ -61,4 +61,11 @@ Auto-refresh: The application automatically refreshes every 20 minutes to fetch 
 
 ## Just follow☝️ me and Star⭐ my repository 
 
-## [Buy me a Coffee☕](https://www.buymeacoffee.com/spidy20)
+## Authors
+
+- [@AK2k30](https://www.github.com/AK2k30)
+## Conclusion
+
+#### If you like this package, show your support & love!
+
+[![buy me a coffee](https://res.cloudinary.com/customzone-app/image/upload/c_pad,w_200/v1712840190/bmc-button_wl78gx.png)](https://www.buymeacoffee.com/akashsunile)
