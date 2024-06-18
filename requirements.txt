@@ -9,3 +9,4 @@ nltk
 streamlit_autorefresh
 sumy
 requests
+lxml[html_clean]
