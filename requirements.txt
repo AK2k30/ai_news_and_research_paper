@@ -3,12 +3,12 @@ newspaper3k
 urllib3
 streamlit
 beautifulsoup4
-protobuf==3.20.0
+protobuf==3.20.2
 jinja2>=3.0
 newspaper3k==0.2.8
-nltk==3.6.5
-Pillow==9.0.1
-requests==2.26.0
-streamlit==1.5.0
+nltk==3.6.6
+Pillow==10.3.0
+requests==2.32.2
+streamlit==1.30.0
 streamlit-autorefresh==0.2.0
 sumy==0.8.1
