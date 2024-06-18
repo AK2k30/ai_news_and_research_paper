@@ -12,7 +12,6 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 import requests
 
-# Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 try:
@@ -85,7 +84,6 @@ def display_news(list_of_news, news_quantity):
                 unsafe_allow_html=True)
             st.markdown("[Read more at {}]({})".format(news.source.text, news.link.text))
 
-            # Display important abstracts
             try:
                 important_abstracts = summarize_text(news_data.text, sentence_count=5)
                 st.markdown(f"**Important Points:**")
@@ -147,7 +145,6 @@ def fetch_research_papers():
 
 
 def fetch_research_papers_google():
-    # This function will search Google and return summarized AI research papers
     google_search_url = "https://www.google.com/search?q=AI+research+papers&tbm=nws"
     try:
         response = requests.get(google_search_url)
@@ -193,13 +190,11 @@ def display_research_papers(papers, paper_quantity):
 def run():
     st.title("News Summarizer: A Summarised News📰 Portal")
 
-    # Category selection
     categories = ['Technology', 'Science', 'Artificial Intelligence', 'Research Papers']
     chosen_category = st.selectbox("Select News Category:", categories)
 
     no_of_news = st.slider('Number of News:', min_value=5, max_value=25, step=1)
 
-    # Auto-refresh functionality with Streamlit's built-in method
     count = st_autorefresh(interval=20 * 60 * 1000, key="refresh_counter")
 
     if chosen_category == 'Research Papers':
@@ -211,18 +206,18 @@ def run():
             st.error("No research papers found.")
     else:
         news_list = fetch_category_news(chosen_category)
-        new_news_available = False  # New flag to track if news is updated
+        new_news_available = False  
         if news_list:
             if chosen_category not in st.session_state['previous_news'] or len(news_list) != len(st.session_state['previous_news'][chosen_category]):
                 st.session_state['previous_news'][chosen_category] = news_list
-                new_news_available = True  # Set flag to True if news is updated
+                new_news_available = True  
 
             if count:
                 st.success("News has been updated!")
             st.subheader(f"✅ Here are some {chosen_category} news for you")
             display_news(news_list, no_of_news)
 
-            if new_news_available:  # Show toast only if news is updated
+            if new_news_available:  
                 st.toast("New news updates are available!")
         else:
             st.error(f"No news found for {chosen_category}")
